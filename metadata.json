@@ -1,0 +1,8 @@
+{
+  "name": "Remix: IEPSmart Track",
+  "description": "A comprehensive tool for teachers to track student IEP progress, generate daily reports, and automate monthly summaries using AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

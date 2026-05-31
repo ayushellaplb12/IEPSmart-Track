@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "Student": {
+      "title": "Student",
+      "description": "Student profile with personal IEP indicators",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "class": { "type": "string" },
+        "nisn": { "type": "string" },
+        "indicators": {
+          "type": "array",
+          "description": "List of personalized IEP indicators"
+        }
+      },
+      "required": ["name", "class", "nisn"]
+    },
+    "Record": {
+      "title": "Daily Record",
+      "description": "Daily monitoring data for a student",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "scores": { "type": "object" },
+        "activityLog": { "type": "string" },
+        "summary": { "type": "string" }
+      },
+      "required": ["studentId", "date", "scores"]
+    }
+  },
+  "firestore": {
+    "students": {
+      "schema": "Student",
+      "description": "Collection of monitored students"
+    },
+    "records": {
+      "schema": "Record",
+      "description": "Collection of daily monitoring logs"
+    }
+  }
+}
